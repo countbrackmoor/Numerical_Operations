@@ -131,10 +131,9 @@ public class WylanAdamCSC205NumericConversions {
         }
 
         /**
-         * Returns a sentence summarizing the results, eg: "10101 converted from
-         * base 2 to base 12 is 19_12"
+         * Returns the converted number
          */
-        return toBeConverted + " converted from base " + startingBase + " to base " + targetBase + " is " + converted + "_" + targetBase;
+        return converted;
 
         //numericConverter()
     }
