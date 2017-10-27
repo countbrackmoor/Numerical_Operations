@@ -1,7 +1,4 @@
 /* Project 1: Numeric Conversions
- * Name; Adam Wylan
- * Date: 9/03/2017
- * CSC 205 01PR
  * 
  * Purpose: The "numericConverter" method will convert a positive integer in a specified base to another base.
  * 
