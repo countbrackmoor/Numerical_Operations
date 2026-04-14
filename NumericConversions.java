@@ -16,23 +16,24 @@ public class NumericConversions {
     public static void main(String args[]) {
 
         //Scanner is opened and inputs are requested
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please enter a positive integer: ");
-        String integer = input.next().toLowerCase(); // Convert to lowercase for consistency
-        System.out.println("Please specify the base of that integer, between 2 and 25: ");
-        int oldBase = input.nextInt();
-        System.out.println("Please specify the base you would like that integer converted to, between 2 and 25");
-        int newBase = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Please enter a positive integer: ");
+            String integer = input.next().toLowerCase(); // Convert to lowercase for consistency
+            System.out.println("Please specify the base of that integer, between 2 and 25: ");
+            int oldBase = input.nextInt();
+            System.out.println("Please specify the base you would like that integer converted to, between 2 and 25");
+            int newBase = input.nextInt();
 
-        // Validate bases
-        if (oldBase < 2 || oldBase > 25 || newBase < 2 || newBase > 25) {
-            System.out.println("Bases must be between 2 and 25. Please restart the program.");
-            return;
+            // Validate bases
+            if (oldBase < 2 || oldBase > 25 || newBase < 2 || newBase > 25) {
+                System.out.println("Bases must be between 2 and 25. Please restart the program.");
+                return;
+            }
+
+            //numericConverter method is called using the requested values as parameters
+            String result = numericConverter(integer, oldBase, newBase);
+            System.out.println(result);
         }
-
-        //numericConverter method is called using the requested values as parameters
-        String result = numericConverter(integer, oldBase, newBase);
-        System.out.println(result);
         //main()
     }
 
